@@ -42,7 +42,7 @@ const Header: React.FC<HeaderProps> = ({ currentTab, setTab }) => {
   ];
 
   return (
-    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="bg-white/80 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div 
@@ -51,11 +51,14 @@ const Header: React.FC<HeaderProps> = ({ currentTab, setTab }) => {
           >
             <Logo />
             <div className="flex flex-col">
-              <span className="text-2xl font-black leading-tight tracking-tighter text-gray-900 group-hover:text-indigo-600 transition-colors">
-                Audios<span className="text-indigo-600">On</span>
-              </span>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl font-black leading-tight tracking-tighter text-gray-900 group-hover:text-indigo-600 transition-colors">
+                  Audios<span className="text-indigo-600">On</span>
+                </span>
+                <span className="bg-indigo-600 text-white text-[8px] px-1.5 py-0.5 rounded font-black tracking-tighter">2026</span>
+              </div>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400 -mt-1">
-                Music & Career
+                Next-Gen Music
               </span>
             </div>
           </div>
@@ -83,7 +86,7 @@ const Header: React.FC<HeaderProps> = ({ currentTab, setTab }) => {
                onClick={() => setTab('plans')}
                className="bg-gray-900 text-white px-6 py-2.5 rounded-xl text-sm font-black hover:bg-indigo-600 transition-all shadow-lg hover:shadow-indigo-200 active:scale-95"
              >
-               Assinar Pro
+               Assinar 2026 Pro
              </button>
           </div>
         </div>
